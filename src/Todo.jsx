@@ -5,7 +5,6 @@ function Todo() {
   let [task, setTask] = useState("");
   let [todos, setTodos] = useState([]);
   let [editIndex, setEditIndex] = useState(null);
-  let [darkMode, setDarkMode] = useState(false);
 
   let addTodo = () => {
     if (task.trim() === "") return;
@@ -35,12 +34,9 @@ function Todo() {
   };
 
   return (
-    <div className={darkMode ? "todolist dark" : "todolist"}>
+    <div className="todolist">
       <div className="header">
         <h2>Todo List</h2>
-        <button className="mode-btn" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "Light" : "Dark"}
-        </button>
       </div>
 
       <div className="todoname">
